@@ -35,20 +35,61 @@ class Solution {
     // return ans
     
     
-      List<Integer> arr = new ArrayList<>();
-        int k = 1;
-        for(int i =digits.length-1;i>=0;i--){
-            arr.add(0, (digits[i]+k)%10);
-            k=(digits[i]+k)/10;
+
+
+  for(int i = digits.length-1; i>=0; i--){
+            if(digits[i] < 9){
+                digits[i]++;
+                return digits;
+            }
+            digits[i] = 0;
         }
-
-        while(k!=0){
-            arr.add(0,k%10);
-            k/=10;
-        }
+        digits = new int [digits.length+1];
+        digits[0] = 1;
+        return digits;
 
 
-return  arr.stream().mapToInt(Integer::intValue).toArray();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//       List<Integer> arr = new ArrayList<>();
+//         int k = 1;
+//         for(int i =digits.length-1;i>=0;i--){
+//             arr.add(0, (digits[i]+k)%10);
+//             k=(digits[i]+k)/10;
+//         }
+
+//         while(k!=0){
+//             arr.add(0,k%10);
+//             k/=10;
+//         }
+
+
+// return  arr.stream().mapToInt(Integer::intValue).toArray();
 
     }
 }
