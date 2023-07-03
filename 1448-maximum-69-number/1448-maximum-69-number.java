@@ -7,6 +7,6 @@ class Solution {
                 break;
             }
         }
-        return Integer.valueOf(new String(s));
+        return Integer.parseInt( String.valueOf(s));
     }
 }
