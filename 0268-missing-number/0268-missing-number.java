@@ -8,7 +8,7 @@ class Solution {
         int count = 0;
  
         for(int i=0;i<=n;i++){
-            if(al.indexOf(i)==-1){
+            if(!al.contains(i)){
                 count = i;
                 break; 
             }
